@@ -1,0 +1,296 @@
+body
+{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding: 0;
+  font-size: 24px;
+}
+
+a{
+  width: 100%;
+  height: 100%;
+}
+.container-date
+{
+  /*background-image:linear-gradient(90deg, blue 10%, #000 10%);*/
+  background: radial-gradient(#7797 8%, #145 8%, #332 70%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: fixed;
+  text-align: center;
+  margin-left: 27px;
+  margin-top: 0;
+  z-index: 999
+}
+.container-date:hover{
+    text-shadow: 5px -2px 0px #9999;
+}
+.hour
+{
+  background: #888;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  left: 25px;
+  top: 50px;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+    z-index: 10;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition: all 0.05s;
+}
+.secondes
+{
+  background: #9999;
+  width: 35px;
+  height: 1px;
+  position: absolute;
+  left: 15px;
+  top: 50px;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  z-index: 50;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  transition: all 0.05s;
+}
+.minutes
+{
+  background: #ab9f9f;
+  width: 31px;
+  height: 2px;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  z-index: 500;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  transition: all 0.05s;
+}
+.p1,.p2,.p3,.p4,.p4,.p5,.p6,.p7,.p8,.p9,.p10,.p11,.p12
+{
+  position: absolute;
+  font-weight: 100;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+.p1{
+  top: -12px;
+  left: 64px;
+  font-size: 15px;
+  color: white;
+}
+.p2{
+  top: -0px;
+  left: 79px;
+  font-size: 15px;
+  color: white;
+}
+.p3{
+  top: 20px;
+  left: 89px;
+  font-size: 15px;
+  color: white;
+}
+
+.p4{
+  top: 43px;
+  left: 86px;
+  font-size: 15px;
+  color: white;
+}
+.p5{
+  top: 60px;
+  left: 71px;
+  font-size: 15px;
+  color: white;
+}
+.p6{
+  top: 68px;
+  left: 49px;
+  font-size: 15px;
+  color: white;
+}
+.p7{
+  top: 64px;
+  left: 28px;
+  font-size: 15px;
+  color: white;
+}
+.p8{
+  top: 50px;
+  left: 12px;
+  font-size: 15px;
+  color: white;
+}
+.p9{
+  top: 30px;
+  left: 3px;
+  font-size: 15px;
+  color: white;
+}
+.p10{
+  top: 9px;
+  left: 6px;
+  font-size: 15px;
+  color: white;
+}
+
+.p11{
+  top: -7px;
+  left: 20px;
+  font-size: 15px;
+  color: white;
+}
+.p12{
+  top: -14px;
+  left: 42px;
+  font-size: 15px;
+  color: white;
+}
+
+
+.menu
+{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  background: #2299;
+  margin-top: 1px;
+  margin-right: 10px;
+  border-radius: 50%;
+  z-index: 999;
+  cursor: pointer;
+  background-image:linear-gradient(black 20%, blue 5%, #33333888 100%);
+}
+.span1
+{
+  width: 30px;
+  height: 3px;
+  background: #7ca81c;
+  position:absolute;
+  z-index: 200;
+  top: 5px;
+  left:2px;
+}
+.span2
+{
+  width: 30px;
+  height: 3px;
+  background: #7ca81c;
+  position:absolute;
+  z-index: 200;
+  top: 14px;
+  left:2px;
+}
+.span3
+{
+  width: 30px;
+  height: 3px;
+  background: #7ca81c;
+  position:absolute;
+  z-index: 200;
+  top: 23px;
+  left:2px;
+}
+.span-toggle1
+{
+  transition: all 0.05s;
+  transform: rotate(55deg) translate(8px) translateY(7px);
+
+}
+.span-toggle2
+{
+  transition: all 0.05s;
+  transform: rotate(-55deg) translate(-1px);
+}
+.span-toggle3{
+    display: none;
+}
+.content
+{
+  width: 100%;
+  height: 100%;
+  background: #488;
+  display: none;
+  margin-right: 0;
+  margin-top: -24px;
+  z-index: 333;
+  position: fixed;
+}
+.content-toggle
+{
+  display: block;
+  opacity: .5;
+  transition: all 0.5s;
+  position: fixed;
+}
+.content .smyle
+{
+  float: right;
+  margin-right: 30px;
+  margin-top: 260px;
+  list-style-type:none;
+}
+.content .nosmyle
+{
+list-style-type: none;
+float: left;
+margin-top: 250px;
+margin-left: -10px;
+}
+.content li a
+{
+  color: #111;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+
+
+.video
+{
+  float: right;
+  z-index: 9999;
+  width: 200px;
+  height:200px;
+  opacity: 0;
+}
+.canvas{
+margin-top: -200px;
+}
+.highlight
+{
+  position: absolute;
+  background: white;
+  border: solid 1px #0888;
+  transition: all 0.02s;
+  border-radius: 10px;
+  z-index: 331;
+}
+#intup
+{
+  z-index:99999;
+   position: absolute;
+   width: 100px;
+   height: 20px;
+   border-radius: 10px;
+   margin-top: 1px;
+}
+
+.output
+{
+  max-width: 500px;
+  max-height: 500px;
+  overflow: scroll;
+  position: absolute;
+  background: #220888;
+  margin: 20px;
+  z-index: 9999;
+
+}

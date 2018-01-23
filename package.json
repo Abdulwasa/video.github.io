@@ -1,0 +1,19 @@
+{
+  "name": "gum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eigne.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.css, *.html, *.js'"
+  },
+  "author": "npm adduser",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.5"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1"
+  }
+}
