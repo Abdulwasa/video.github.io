@@ -4,19 +4,32 @@ window.addEventListener('DOMContentLoaded', function() {
    switch (pro) {
      case 'ja':
        getVideo();
+       windowEvent()
        break;
     case 'Ja':
       getVideo();
+      windowEvent()
       break;
    case 'nein':
-         alert('Das ist schade, dass du dich dagegen entschieden hast. Es gibt nichts zu sehen');
+      alert('Das ist schade, dass du dich dagegen entschieden hast. Es gibt nichts zu sehen');
+      document.body.style.backgroundImage = 'background: radial-gradient(#7797 8%, #145 8%, #332 70%)';
+
          break;
   case null:
-         alert('Das ist schade, dass du dich dagegen entschieden hast. Es gibt nichts zu sehen');
-         break;
+
+      alert('Du musst es mit ja bestätigen, wenn du diese Webseite sehen möchtest');
+      ctx.font = "30px Arial";
+      ctx.fillText("Hello World",10,50);
+    break;
   case '':
-      alert('Das ist schade, dass du dich dagegen entschieden hast. Es gibt nichts zu sehen');
-   }
+  alert('Du musst mit ja bestätigen, wenn du diese Webseite sehen möchtest');
+      document.body.style.backgroundImage = 'background: radial-gradient(#7797 8%, #145 8%, #332 70%)';
+      break;
+  case undefined:
+    alert("Du musst mit ja bestätigen, wenn du diese Webseite sehen möchtest");
+        document.body.style.backgroundImage = 'background: radial-gradient(#7797 8%, #145 8%, #332 70%)';
+     }
+
  });
 
 //
@@ -67,6 +80,7 @@ var menu = document.querySelector('.menu');
 var video = document.querySelector('.video');
 var canvas = document.querySelector('.canvas');
 var ctx = canvas.getContext('2d');
+
 
 function getVideo(){
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
@@ -134,17 +148,20 @@ links.forEach(a => a.addEventListener('mouseout', highlightout));
 
 let myHistory = ' oh ja. Hast du dich entdeckt. cklick auf dem Foto zu speichern';
 document.body.style.backgroundImage = 'background: radial-gradient(#7797 8%, #145 8%, #332 70%)';
-
+function windowEvent(){
 window.addEventListener('scroll', function (){
-    makeIMage();
+
   if(window.scrollY >= 10){
     var p = document.createElement('p');
     p.textContent = myHistory;
     p.style.zIndex = '999';
     p.style.margin = "30px";
-    document.body.appendChild(p)
+    document.body.appendChild(p);
+    makeIMage();
   }
-})
+});
+}
+
 //
 // $(document).ready(function(){
 //   $('#button').click(function (){
@@ -165,6 +182,3 @@ window.addEventListener('scroll', function (){
 //   })
 //
 //   })
-
-
-document.querySelector('.slider').scrollIntoView(true);
